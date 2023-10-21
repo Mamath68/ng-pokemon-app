@@ -1,9 +1,11 @@
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: 'app.component.html',
+    selector: 'app-root',
+    templateUrl: 'app.component.html',
+    standalone: true,
+    imports: [RouterOutlet],
 })
 export class AppComponent {
   constructor(
