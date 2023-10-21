@@ -20,12 +20,4 @@ export class AuthGuard {
     this.router.navigate(['/login']);
     return false;
   }
-
-  checkLogin(url: string): boolean {
-    if (this.authService.isLoggedIn) { return true; }
-    this.authService.redirectUrl = url;
-    this.router.navigate(['/login']);
-
-    return false;
-  }
 }
